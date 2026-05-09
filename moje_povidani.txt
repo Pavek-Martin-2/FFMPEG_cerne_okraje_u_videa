@@ -1,0 +1,45 @@
+
+tento skriptik opet pro PowerShell 5.1 dela to ze prevadi pomer stran u videa ktere je na vysku,
+jako nejklasictejsi priklad jsou myslim videa z instagramu a z facebooku, treba jsem stahnul
+video ktera melo na vysku 1280x718 na sirku
+mam u televize setup box kterej umoznuje prehravat videa z pripojeneho flash disku
+pokud je pomer stran 4:3 nebo jeste lepe 16:9 tak je vse v poradku ale u videi z facebooku a instagramu
+byl obraz uz tak zkresleny ze se na to nedalo koukat Ariana byla na obrazovce 16:9 sirsi jak delsi :)
+takze jsem zacal patrat co by se stim dalo delat a toto je vysledek
+funguje to podbne jako muj predchozi program na hromadenou upravu hlasitosti videi v aktualni adresari 
+ale je zde pouzit prikaz kteri opet poradila AI 
+"ffmpeg -i vstupni_video.mp4 -vf "pad=ih*16/9:ih:(ow-iw)/2:(oh-ih)/2" -c:a copy vystupni_video.mp4"
+a tento prikaz se aplikuje na vsechna videa v danem adrasari a vysledek je videt na screenshotu v
+adresari "scr\" uz jsem to parkrat vydel treba na youtube u tzv. short videi ktere vetsinou byvaji natocene
+najakym telefonem takze opet format napr. 2:1 na vysku tak pri prehravni na notebooku prida po stranach 
+videa cerne "pruhy" nebo jak to nazvat lepe, aby proste obraz nebyl "rozslapunetej"
+tady bych rekl ze jim to tan bezi jako automatika (tezko tam u toho nekdo sedi)
+uzivatel posle nejake video, server, nebo skript na nem bezici zjisti pomer stran prijateho videa
+treba mam na Linuxu utilitu "mediainfo" ktera toto umi a paklize se zjisti ze je video na vejsku
+tak se automaticky upravi okraje
+me tohle funguje tak ze mam vyhrazenou slozku napr. "c:\work" do ni si kopiruju videa a u toho taky mam
+tenhle skript kterej pustim tak a on se podiva na obsah adresare a na pripony souboru a co najde to prevede
+a k puvodnimu nazvu souboru prida sulfix "_16ku9" foneticky je schvalne windows se brani znaku ":" v nazvu
+opet je to udelany tak aby sli do tohoto adresare videa prubezne pridavat takze kdy se skript zpusti znova
+tak ti nazvy souboru ktere jiz toto obsahuji se vynechaji vsechno je hodne podobny mimu predchozimu programu
+na upravu zvuku kde je take pouzita utilita "ffmpeg" akorat samozdrejme ten hlavni prikaz kterej neco provadi
+a kterej jsem zde uvedl je jinej
+no a pak kdyz je htoho vic tak se to pak nahraje na flesku ktera je pripojen do televize
+aby se z kazdym prdem nebehalo vzlast, pak se da koukat na velky obrazovacez kanape a clovek se nebusi nekde
+hrbyt u tabletu nebo u pocitace
+konecne jsem se dokopol a udelal jsem v pocitaci adresar "c:\tools" kde mam vsechny svoje kraviny
+screenshot pridan co "scr\"
+predetim byli ruzne pohazeni v "C:\windows" coz bylo neprehledny a hrozilo taky nebezpeci ze omylem neco
+vymazu co nemam, samozdrejme bylo potreba pridat do systemovi promenny PATH patricnej odkaz na "c:\tools"
+ale to uz jsem popisoval nekolikrat
+jinak ja jsem vlastne zapomel rict co mam, takze mam televizi ale tu strasi co umi jenom DVTB-1 nebo jak se to 
+rika a kni mam setup box kterej umi prijimat signal DVTB-2 a ten prevadi a posila do televize
+na tom setup boxu bezi nejakej micro kernel podle me a ma to na sobe konektor USB-A takze se da pripojit fleska
+a v sobe to pak ma jeste jednoduche souborobovej manazer, jako ve smyslu zakladnich operaci, jako je
+kopiruj, smaz prejmenuj, vytvor adresar apod. mena to treba funkci ze by se dalo vice souboru najednou 
+oznacit maskou a ty pak kopirovat hromadne, je to opravdu jenom zakladni ale staci to 
+jmenuje se to "TESLA TE-301" tak nechci delat rekamu ale doporucuju (dalkovej ovladac je dnes uz samozdrejmosti)
+takze opravdu to je z v leze z kanape z ovaldacem v ruce se poustej na velky televizi videa, co vic si prat...
+ale trochu se divim protoze pamatuju ze byl kdysi for ze se rikalo, Tesla - technicky slabe :)
+
+9.5.2026 autor

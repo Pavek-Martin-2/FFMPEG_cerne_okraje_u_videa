@@ -1,0 +1,5 @@
+ffmpeg -i vstupni_video.mp4 -vf "scale=1440:1080,pad=1920:1080:(1920-1440)/2:0:black" -c:a copy vystup_1080p.mp4
+
+
+toto
+ffmpeg -i vstupni_video.mp4 -vf "pad=ih*16/9:ih:(ow-iw)/2:(oh-ih)/2" -c:a copy vystup.mp4
